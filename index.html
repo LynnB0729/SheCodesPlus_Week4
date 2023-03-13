@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        /* // Challenge
+        // 1. Create a function isWindy
+        // 2. Add a speed parameter to the function
+        // 3. If speed is greater than 5, alert ‘It is windy’
+        // 4. Else, alert ‘It is not windy’
+        // 5. Call the function twice with different arguments to test both scenarios */
+
+        /*function isWindy(speed) {
+            if (speed > 5) {
+                alert("It is Windy");
+            } else {
+                alert("It is not Windy")
+            }
+        };
+
+        isWindy(7);
+        isWindy(2);
+
+        let userSpeedChoice = prompt("What is the current speed?");
+        isWindy(userSpeedChoice);*/
+
+        // Challenge 1
+        // 1. Modify the function is Windy and return true if the speed is greater than 5 and false if not
+        // 2. Call the function and alert ‘It is windy’ if it is windy, Else, alert ‘It is not windy’
+
+        // Challenge 2
+        // 1. Add unit parameter to isWindy
+        // 2. if greater than 5 and unit is metric, return true, else return false
+        // 3. Test both scenarios
+        // isWindy(2, 'imperial') should return false
+        // isWindy(20, 'metric') should return true
+
+
+        function isWindy(speed, metric) {
+            if (speed > 5 && metric === "metric") {
+                return true; //true means the windspeed is GREATER than 5
+            } else {
+                return false; //false means the windspeed is LESS than 5
+            }
+        }
+
+        let userChoiceSpeed = prompt("Choose a wind speed");
+        let userChoiceMetric = prompt("Metric or Imperial")
+
+        let currentWind = isWindy(userChoiceSpeed, userChoiceMetric);
+
+
+        //if greater than 5 and unit is metric, return true 
+
+    </script>
+
+</body>
+
+</html>

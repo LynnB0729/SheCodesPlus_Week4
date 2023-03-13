@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Practice</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        .special {
+            color: red;
+            font-size: 46px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SheCodes Plus / Selectors</h1>
+    <div id="app"></div>
+
+    <ul>
+        <li class="country">France 🇫🇷</li>
+        <li class="country">USA 🇺🇸</li>
+        <li class="coutry" id="special">Portugal 🇵🇹</li>
+    </ul>
+
+    <script>
+        let specialListItem = document.querySelector("#special");
+        console.log(specialListItem);
+
+        let countryListItems = document.querySelectorAll(".country");
+        console.log(countryListItems);
+
+        let addClass = document.querySelector("#special");
+        addClass.classList.add("special");
+        addClass.innerHTML = "My Home Country, USA";
+    </script>
+</body>
+
+</html>

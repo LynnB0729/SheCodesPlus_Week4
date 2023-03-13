@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Practice</title>
+
+    <h1 id="theDate"> Today is....</h1>
+    <button id="myButton">Click for Today's Date</button>
+</head>
+
+<body>
+    <script>
+
+        console.log(new Date()); //log the current date
+        console.log(Date.now()); //log the number of milliseconds in the current time
+
+        let now = new Date(); //create a variable & set it to the current date 
+        console.log(now.getDay()); //log the now variable with the .getDay() method, the dates are in order Sunday-Saturday (0 = sunda, 1=monday, 2=tuesday, 3=wednesday, 4=thursday, 5=friday, 6=saturday)
+        console.log(now.getFullYear()); //log current year
+        console.log(now.getMilliseconds()); //different milliseconds???
+        console.log(now.getMonth()); //logs current month, January = 0, february = 1, march = 2, etc. 
+
+        //Display the current date following the following format: Today is Thursday, April 4, 2020
+        let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+        let dayOfWeek = days[now.getDay()];
+
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        let currentMonth = months[now.getMonth()];
+
+        let currentDayOfMonth = now.getDate();
+        let currentYear = now.getFullYear();
+
+
+        function displayDate() {
+            let changeDisplay = document.querySelector("h1");
+            changeDisplay.innerText = `Today is ${dayOfWeek}, ${currentMonth} ${currentDayOfMonth}, ${currentYear}`
+
+        };
+
+        let myButton = document.querySelector("#myButton");
+        myButton.addEventListener("click", displayDate);
+
+    </script>
+</body>
+
+</html>
